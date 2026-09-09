@@ -13,3 +13,12 @@
 @media(max-width:640px) and (prefers-reduced-motion:no-preference){.canopy-layer,.cloud-drift{display:block;background-position:88% 50%}.canopy-layer{mask-image:radial-gradient(ellipse 65% 25% at 85% 0%,#000 50%,transparent 100%)}.cloud-drift{mask-image:radial-gradient(ellipse 70% 17% at 30% 18%,#000 25%,transparent 100%);animation-duration:32s}.leaves svg{animation-duration:6s}}
 .wind-filters{position:absolute;pointer-events:none}
 
+.robot-companion{position:absolute;inset:0;pointer-events:none}
+.robot-art{position:absolute;max-width:none;overflow:visible}
+.robot-nod{transform-origin:1308px 621px;animation:robot-greeting 8s ease-in-out infinite}
+.robot-eye-glow{opacity:.3;filter:blur(2px);animation:robot-eye-light 4s ease-in-out infinite}
+.robot-blink{opacity:0;animation:robot-eye-blink 8s linear infinite}
+@keyframes robot-greeting{0%,12%,100%{transform:rotate(0deg)}30%,40%{transform:rotate(-3deg) translateY(-1px)}55%{transform:rotate(1.6deg)}68%,80%{transform:rotate(-1deg)}}
+@keyframes robot-eye-light{0%,100%{opacity:.12}50%{opacity:.65}}
+@keyframes robot-eye-blink{0%,43%,46%,73%,76%,100%{opacity:0}44%,45%,74%,75%{opacity:.92}}
+@media(prefers-reduced-motion:reduce){.robot-companion{display:none}}
